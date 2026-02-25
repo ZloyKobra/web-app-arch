@@ -33,7 +33,8 @@
 
 ### 8. Ветка и Pull Request
 
-![созданный PR на GitHub](screenshots/10-pull-request.png)
+![созданный PR на GitHub](screenshots/10-pull-request-created.png)
+![созданный PR на GitHub](screenshots/10-pull-request-merged.png)
 
 ### Ссылка на PR: 
 ``https://github.com/ZloyKobra/web-app-arch/pull/1``
