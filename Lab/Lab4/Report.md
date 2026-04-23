@@ -66,4 +66,4 @@ Get - Возвращает всю разметку включая текст
 
 
 ### Ссылка на PR: 
-``https://github.com/ZloyKobra/web-app-arch/pull/4``
+``https://github.com/ZloyKobra/web-app-arch/pull/3``
