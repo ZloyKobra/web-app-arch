@@ -1,0 +1,49 @@
+server {
+
+listen 443 ssl;
+
+server_name 192.168.23.128;
+
+ssl_certificate     /etc/ssl/certs/nginx-selfsigned.crt;
+ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
+
+root /var/www/boardy-laravel/boardy-laravel/public;
+
+index index.php;
+
+
+access_log /var/log/nginx/boardy-access.log;
+
+error_log /var/log/nginx/boardy-error.log;
+
+
+location / {
+
+try_files $uri $uri/ =404;
+
+}
+
+location ~ \.php$ {
+    fastcgi_pass unix:/var/run/php/php-fpm.sock;
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
+
+location /phpmyadmin {
+    alias /usr/share/phpmyadmin;
+    index index.php;
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php-fpm.sock;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+    }
+}
+
+error_page 404 /404.html;
+
+}
+server {
+    listen 80;
+    server_name 192.168.23.128;
+    return 301 https://$host$request_uri;
+}
