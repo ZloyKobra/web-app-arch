@@ -1,5 +1,3 @@
-<img width="641" height="67" alt="putty_8bcp5tLQsQ" src="https://github.com/user-attachments/assets/62b7734a-cf1b-4ea1-bdde-20c81f660a5d" /># Практика 7
-
 ## Задание к отчёту
 ## PHP-FPM и FastAPI для Boardy
 
