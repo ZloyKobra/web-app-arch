@@ -1,0 +1,6 @@
+{
+    "require": {
+        "doctrine/dbal": "^3.0",
+        "egulias/email-validator": "^4.0"
+    }
+}
